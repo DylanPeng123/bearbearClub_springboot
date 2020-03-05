@@ -1,0 +1,11 @@
+server:
+  port: 8881
+
+
+#Github授权登录配置
+github:
+  client:
+    id: 45dad671d252bed2e086
+    secret: 48e811e0a761125a7d1213ddddba3d274b46a939
+  redirect:
+    uri: http://localhost:8881/callback
