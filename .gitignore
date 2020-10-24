@@ -4,6 +4,12 @@ target/
 !**/src/main/**
 !**/src/test/**
 
+### 敏感信息 ###
+
+**/application.yml
+**/application-dev.yml
+**/application-pro.yml
+
 ### STS ###
 .apt_generated
 .classpath
