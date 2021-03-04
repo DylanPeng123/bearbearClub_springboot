@@ -1,4 +1,4 @@
-package club.bearbear.blog.utils;
+package club.bearbear.common.utils;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -17,7 +17,7 @@ import java.text.SimpleDateFormat;
  *
  * @author Dylan
  * @description json工具类
- * @createDate 2020-03-04 18:02
+ * @createDate 10/28/20 18:04
  */
 public class JsonUtil {
 
@@ -93,7 +93,6 @@ public class JsonUtil {
      * @param <T>   泛型
      */
     private static <T> T parse(String json, Class<T> clazz, TypeReference type) {
-
         T obj = null;
         if (!StringUtils.isEmpty(json)) {
             try {
