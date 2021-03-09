@@ -13,13 +13,13 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 
 /**
- * ClassName JsonUtil
+ * ClassName JsonUtils
  *
  * @author Dylan
  * @description json工具类
  * @createDate 10/28/20 18:04
  */
-public class JsonUtil {
+public class JsonUtils {
 
     private static ObjectMapper om = new ObjectMapper();
 

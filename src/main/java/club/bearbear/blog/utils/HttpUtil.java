@@ -5,7 +5,7 @@ import okhttp3.*;
 import java.io.IOException;
 
 /**
- * ClassName HttpUtil
+ * ClassName HttpUtils
  *
  * @author Dylan
  * @description Http util

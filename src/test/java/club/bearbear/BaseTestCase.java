@@ -1,6 +1,7 @@
 package club.bearbear;
 
-import club.bearbear.common.utils.AddressUtil;
+import club.bearbear.common.utils.AddressUtils;
+import club.bearbear.common.utils.RedisUtils;
 import club.bearbear.framework.config.BearbearConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,6 +20,20 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class BaseTestCase {
 
+    @Autowired
+    private RedisUtils redisUtil;
+
+    @Test
+    public void cacheTest(){
+        //redisUtil.set("test3","12334",1234l);
+
+        long name = redisUtil.getExpire("test3");
+        System.out.println("-->>>>>>D----->  " +name);
+        //Object test = redisUtil.get("test1");
+
+        //System.out.println("-->>>>>>D----->  " +test.toString());
+
+    }
 
     @Test
     public void configTest() {
@@ -29,8 +44,11 @@ public class BaseTestCase {
 
     @Test
     public void baseTest() {
-        String realAddressByIP = AddressUtil.getRealAddressByIP("171.43.153.131");
+        String realAddressByIP = AddressUtils.getRealAddressByIP("171.43.153.131");
         System.out.println("-->>>>>>D----->  " + realAddressByIP);
     }
+
+
+
 
 }

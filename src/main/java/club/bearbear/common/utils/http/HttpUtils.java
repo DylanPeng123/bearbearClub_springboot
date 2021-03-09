@@ -13,14 +13,14 @@ import java.net.URLConnection;
 import java.security.cert.X509Certificate;
 
 /**
- * ClassName HttpUtil
+ * ClassName HttpUtils
  *
  * @author Dylan
  * @description 通用http发送方法
  * @createDate 10/28/20 17:17
  */
-public class HttpUtil {
-    private static final Logger log = LoggerFactory.getLogger(HttpUtil.class);
+public class HttpUtils {
+    private static final Logger log = LoggerFactory.getLogger(HttpUtils.class);
 
     /**
      * 向指定 URL 发送GET方法的请求

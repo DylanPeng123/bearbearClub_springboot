@@ -5,13 +5,13 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 /**
- * ClassName IpUtil
+ * ClassName IpUtils
  *
  * @author Dylan
  * @description TODO
  * @createDate 10/28/20 17:24
  */
-public class IpUtil {
+public class IpUtils {
     public static String getIpAddr(HttpServletRequest request) {
         if (request == null) {
             return "unknown";
@@ -43,7 +43,7 @@ public class IpUtil {
     }
 
     private static boolean internalIp(byte[] addr) {
-        if (StringUtil.isNull(addr) || addr.length < 2) {
+        if (StringUtils.isNull(addr) || addr.length < 2) {
             return true;
         }
         final byte b0 = addr[0];

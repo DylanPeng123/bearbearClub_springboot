@@ -19,9 +19,9 @@ import java.util.concurrent.TimeUnit;
  * @createDate 3/5/21 4:18
  */
 @Component
-public final class RedisUtil {
+public final class RedisUtils {
 
-    private static final Logger log = LoggerFactory.getLogger(RedisUtil.class);
+    private static final Logger log = LoggerFactory.getLogger(RedisUtils.class);
 
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;

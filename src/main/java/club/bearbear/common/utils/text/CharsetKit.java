@@ -1,6 +1,6 @@
 package club.bearbear.common.utils.text;
 
-import club.bearbear.common.utils.StringUtil;
+import club.bearbear.common.utils.StringUtils;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -46,7 +46,7 @@ public class CharsetKit {
      * @return Charset
      */
     public static Charset charset(String charset) {
-        return StringUtil.isEmpty(charset) ? Charset.defaultCharset() : Charset.forName(charset);
+        return StringUtils.isEmpty(charset) ? Charset.defaultCharset() : Charset.forName(charset);
     }
 
     /**
@@ -78,7 +78,7 @@ public class CharsetKit {
             srcCharset = StandardCharsets.UTF_8;
         }
 
-        if (StringUtil.isEmpty(source) || srcCharset.equals(destCharset)) {
+        if (StringUtils.isEmpty(source) || srcCharset.equals(destCharset)) {
             return source;
         }
         return new String(source.getBytes(srcCharset), destCharset);

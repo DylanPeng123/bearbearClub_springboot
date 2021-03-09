@@ -1,6 +1,6 @@
 package club.bearbear.common.utils.text;
 
-import club.bearbear.common.utils.StringUtil;
+import club.bearbear.common.utils.StringUtils;
 
 /**
  * ClassName StrFormatter
@@ -30,7 +30,7 @@ public class StrFormatter {
      * @return 结果
      */
     public static String format(final String strPattern, final Object... argArray) {
-        if (StringUtil.isEmpty(strPattern) || StringUtil.isEmpty(argArray)) {
+        if (StringUtils.isEmpty(strPattern) || StringUtils.isEmpty(argArray)) {
             return strPattern;
         }
         final int strPatternLength = strPattern.length();

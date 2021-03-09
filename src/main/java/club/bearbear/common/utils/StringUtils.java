@@ -7,13 +7,13 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * ClassName StringUtil
+ * ClassName StringUtils
  *
  * @author Dylan
  * @description 字符串工具类
  * @createDate 10/28/20 17:24
  */
-public class StringUtil extends StringUtils {
+public class StringUtils extends org.apache.commons.lang3.StringUtils {
 
     /**
      * 空字符串
