@@ -28,7 +28,7 @@
         <commons.fileupload.version>1.3.3</commons.fileupload.version>
         <kaptcha.version>2.3.2</kaptcha.version>
         <bitwalker.version>1.19</bitwalker.version>
-        <jackson.version>2.10.5</jackson.version>
+        <jackson.version>2.12.2</jackson.version>
         <okHttp.version>4.4.0</okHttp.version>
         <oshi.version>3.9.1</oshi.version>
         <poi.version>3.17</poi.version>
