@@ -20,10 +20,10 @@ public class AddressUtil {
     private static final Logger log = LoggerFactory.getLogger(AddressUtil.class);
 
     // IP地址查询
-    public static final String IP_URL = "http://whois.pconline.com.cn/ipJson.jsp";
+    private static final String IP_URL = "http://whois.pconline.com.cn/ipJson.jsp";
 
     // 未知地址
-    public static final String UNKNOWN = "XX XX";
+    private static final String UNKNOWN = "XX XX";
 
     public static String getRealAddressByIP(String ip) {
         String address = UNKNOWN;
