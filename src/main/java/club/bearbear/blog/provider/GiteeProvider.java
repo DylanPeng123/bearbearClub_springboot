@@ -1,7 +1,7 @@
 package club.bearbear.blog.provider;
 
-import club.bearbear.blog.dto.GithubAccessTokenDTO;
-import club.bearbear.blog.dto.GithubUser;
+import club.bearbear.blog.dto.GiteeAccessTokenDTO;
+import club.bearbear.blog.dto.GiteeUser;
 import club.bearbear.common.utils.JsonUtils;
 import club.bearbear.common.utils.http.OKHttpUtils;
 import org.springframework.stereotype.Component;
@@ -9,34 +9,35 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 
 /**
- * ClassName GithubProvider
+ * FileName GiteeProvider
  *
  * @author Dylan
- * @description TODO
- * @createDate 2020-03-04 17:14
+ * @createDate 3/13/21 3:41
  */
 @Component
-public class GithubProvider {
+public class GiteeProvider {
 
-    public String getAccessToken(GithubAccessTokenDTO githubAccessTokenDTO, String url) {
+    public String getAccessToken(GiteeAccessTokenDTO giteeAccessTokenDTO,String url){
         String result = null;
         try {
-            String json = JsonUtils.toJson(githubAccessTokenDTO);
+            String json = JsonUtils.toJson(giteeAccessTokenDTO);
             result = OKHttpUtils.postRequest(url, json);
-        } catch (IOException e) {
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
+
         return result;
     }
 
-    public GithubUser getGithubUser(String accessToken, String url) {
+    public GiteeUser getGiteeUser(String accessToken, String url) {
         //请求github用户信息的url
         url = url + "?access_token=" + accessToken;
         try {
             String result = OKHttpUtils.getRequest(url);
             //将json字符串的用户信息转为bean
-            GithubUser githubUser = JsonUtils.json2Bean(result, GithubUser.class);
-            return githubUser;
+            GiteeUser giteeUser = JsonUtils.json2Bean(result, GiteeUser.class);
+            return giteeUser;
         } catch (IOException e) {
             e.printStackTrace();
         }

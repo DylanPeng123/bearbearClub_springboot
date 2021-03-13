@@ -3,14 +3,14 @@ package club.bearbear.blog.dto;
 import java.util.StringJoiner;
 
 /**
- * ClassName AccessTokenDTO
+ * ClassName GithubAccessTokenDTO
  *
  * @author Dylan
  * @description github认证 dto 数据传输模型
  * @createDate 2020-03-04 16:45
  */
 
-public class AccessTokenDTO {
+public class GithubAccessTokenDTO {
 
     private String client_id;
     private String client_secret;
@@ -60,7 +60,7 @@ public class AccessTokenDTO {
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", AccessTokenDTO.class.getSimpleName() + "[", "]")
+        return new StringJoiner(", ", GithubAccessTokenDTO.class.getSimpleName() + "[", "]")
                 .add("client_id='" + client_id + "'")
                 .add("client_secret='" + client_secret + "'")
                 .add("code='" + code + "'")

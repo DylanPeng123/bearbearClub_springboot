@@ -1,4 +1,4 @@
-package club.bearbear.blog.utils;
+package club.bearbear.common.utils.http;
 
 import okhttp3.*;
 
@@ -11,7 +11,7 @@ import java.io.IOException;
  * @description Http util
  * @createDate 2020-03-04 17:31
  */
-public class HttpUtil {
+public class OKHttpUtils {
 
     public static final MediaType MEDIA_TYPE = MediaType.get("application/json; charset=utf-8");
 
